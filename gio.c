@@ -88,9 +88,10 @@ int main() {
                     f1=fopen(ttys,"r");
                     strcat(textBuffer,"\n");
                     while(1){
+                       cvc=textBuffer+strlen(textBuffer);
                        fgets(cvc,MAX_TEXT-strlen(textBuffer)-1,f1);
                        strcat(textBuffer,"\n");
-                       cvc=textBuffer+strlen(textBuffer);
+                       
                        if(feof(f1))break;
                     }
                     fclose(f1);
